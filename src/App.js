@@ -5,7 +5,6 @@ import {Link,Route,BrowserRouter as Router, Routes} from 'react-router-dom'
 import Users from './Users';
 import About from './About';
 import Home from './Home';
-import SwDev from './SwDev';
 function App() {
   return (
     <div className="App">
