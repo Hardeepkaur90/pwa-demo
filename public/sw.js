@@ -15,7 +15,17 @@ this.addEventListener("install", (event) => {
 });
 
 this.addEventListener("fetch", (event) => {
+      console.log("url===========",event.request.url)
+     
+      event.waitUntil(
+        this.registration.showNotification("Internet", {
+            body: "internet not working",
+        })
+    )
     if (!navigator.onLine) {
+
+          
+        
         event.respondWith(
             caches.match(event.request).then((result) => {
                 if (result) {
